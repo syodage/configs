@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/shameera'
+let g:netrw_dirhist_7='/Users/shameera/code/github/syodage/scio'
 let g:netrw_dirhist_6='/Users/shameera/.config/nvim/plugged/lightline.vim'
 let g:netrw_dirhist_5='/Users/shameera/.oh-my-zsh'
 let g:netrw_dirhist_4='/Users/shameera/.oh-my-zsh/tools'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_2='/Users/shameera/.oh-my-zsh/plugins'
 let g:netrw_dirhist_1='/Users/shameera/.oh-my-zsh'
 let g:netrw_dirhist_0='/Users/shameera/.m2'
 let g:netrw_dirhist_9='/Users/shameera/code/github/spotify/flink-on-k8s-operator/config/crd/bases'
-let g:netrw_dirhist_8='/Users/shameera/code/ghe/flink/cluster-config/kustomize/dev/flyte'
-let g:netrw_dirhist_7='/Users/shameera/code/ghe/flink/cluster-config/kustomize/dev'

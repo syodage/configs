@@ -153,6 +153,10 @@ Plug 'tpope/vim-surround'
 Plug 'ap/vim-buftabline'                  " Easily navigate to buffers
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " Enable fzf inside vim
 
+" Vim Ranger(Terminal File Manager) pluging
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 " GoLang support for vim , commands (:Go{Build | Install | Test | TestFunc | Run | Import | Drop | Doc | AddTags | RemoveTags | Lint  | Vet ..
 " Coverage | Def | Implements | Callees | Refrerrers .... } 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " GoLang support for vim
