@@ -10,8 +10,7 @@ endif
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'itchyny/lightline.vim'
-" Plug 'mhartington/oceanic-next'           " Vim syntax color
-Plug  'joshdick/onedark.vim'              " Vim one dark syntax
+Plug 'joshdick/onedark.vim'              " Vim one dark syntax
 Plug 'haishanh/night-owl.vim'
 Plug 'ap/vim-css-color'
 Plug 'vifm/vifm.vim'                      " Vi[m] like File Manager
@@ -29,21 +28,15 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""
-" => Plugin configs 
+" => FZF configs
 """""""""""""""""""""""""""""""""""""""""
-" FZF configs
 " more examples see https://github.com/junegunn/fzf/blob/master/README-VIM.md
 map <C-R> :FZF<CR>
-" FZF End 
 
-" config for oceanic-next threme
-"if (has("termguicolors"))
-" set termguicolors
-"endif
-"colorscheme OceanicNext
-" End of oceanic-next theme
-
-" Config onedark.vim
+" End of FZF
+"""""""""""""""""""""""""""""""""""""""""
+" => onedark.vim configs
+"""""""""""""""""""""""""""""""""""""""""
 if (empty($TMUX))
   if (has("nvim"))
     "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -57,23 +50,33 @@ if (empty($TMUX))
   endif
 endif
 colorscheme onedark
+" End of onedark
+"""""""""""""""""""""""""""""""""""""""""
+" => night-owl.vim configs
+"""""""""""""""""""""""""""""""""""""""""
 " colorscheme night-owl 
+" End of night-owl
+"""""""""""""""""""""""""""""""""""""""""
+" => lightline configs
+"""""""""""""""""""""""""""""""""""""""""
 " To enable the lightline theme
-let g:lightline = { 'colorscheme': 'nightowl' }
-" End of one dark vim config
+let g:lightline = { 'colorscheme': 'onedark' }
+" --INSERT-- is unnecessary so remove it
+set noshowmode
 
-" Vifm configuration 
-noremap <Leader>vv :Vifm<CR>
-noremap <Leader>vs :VsplitVifm<CR>
-noremap <Leader>sp :SplitVifm<CR>
-noremap <Leader>dv :DiffVifm<CR>
-noremap <Leader>tv :TabVifm<CR>
+" End of one dark vim config
+"""""""""""""""""""""""""""""""""""""""""
+" => Vifm configs
+"""""""""""""""""""""""""""""""""""""""""
+" noremap <Leader>vv :Vifm<CR>
+" noremap <Leader>vs :VsplitVifm<CR>
+" noremap <Leader>sp :SplitVifm<CR>
+" noremap <Leader>dv :DiffVifm<CR>
+" noremap <Leader>tv :TabVifm<CR>
 " End Vifm config
 """""""""""""""""""""""""""""""""""""""""
-" => Custom Configurations 
+" => Ranger configs 
 """""""""""""""""""""""""""""""""""""""""
-" Ranger configuration
-
 " Make Ranger replace netrw and be the file explorer
 let g:rnvimr_ex_enable = 1
 " Draw inner pane borders 

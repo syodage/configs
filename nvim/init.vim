@@ -3,6 +3,7 @@
 
 if exists('g:vscode')
   " VS Code extension
+  source $HOME/.config/nvim/vscode.vim
 else
 
   " General settings
