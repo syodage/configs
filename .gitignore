@@ -7,9 +7,9 @@ iterm2
 jgit
 neofetch
 skhd
-nvim/autoload
-nvim/plugged
-nvim/.netrwhist
+nvim/\.netrwhist
+ranger/plugins
+ranger/__pycache__
 vifm
 Webull\ Desktop
 yabai

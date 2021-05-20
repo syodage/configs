@@ -154,8 +154,7 @@ Plug 'ap/vim-buftabline'                  " Easily navigate to buffers
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " Enable fzf inside vim
 
 " Vim Ranger(Terminal File Manager) pluging
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 " GoLang support for vim , commands (:Go{Build | Install | Test | TestFunc | Run | Import | Drop | Doc | AddTags | RemoveTags | Lint  | Vet ..
 " Coverage | Def | Implements | Callees | Refrerrers .... } 
@@ -204,6 +203,32 @@ noremap <Leader>sp :SplitVifm<CR>
 noremap <Leader>dv :DiffVifm<CR>
 noremap <Leader>tv :TabVifm<CR>
 " End Vifm config
+"""""""""""""""""""""""""""""""""""""""""
+" => Custom Configurations 
+"""""""""""""""""""""""""""""""""""""""""
+" Ranger configuration
+
+" Make Ranger replace netrw and be the file explorer
+let g:rnvimr_ex_enable = 1
+" Draw inner pane borders 
+let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
+" Make Ranger to be hidden after picking a file
+" let g:rnvimr_enable_picker = 1
+" Hide the files included in gitignore
+" let g:rnvimr_hide_gitignore = 1
+" Make Neovim wipe the buffers corresponding to the files deleted by Ranger
+" let g:rnvimr_enable_bw = 1
+" Add a Shadow window, value is equal to 100 will disable shadow
+let g:rnvimr_shadow_winblend = 70
+" Change the border's color
+let g:rnvimr_border_attr = {'fg': 14, 'bg': -1}
+" Link Cursorline into RnvimrNormal highlight in the Floating window
+highlight link RnvimrNormal CursorLine
+
+" Key mapping
+" Map space + r to toggle ranger
+nmap <space>r :RnvimrToggle<CR>
+" End Ranger configuration
 """""""""""""""""""""""""""""""""""""""""
 " => Resources 
 """""""""""""""""""""""""""""""""""""""""
