@@ -2,12 +2,10 @@
 " General Settings
 
 if exists('g:vscode')
-  " VS Code specific settings
-endif
+  " VS Code extension
+else
 
-if !exists('g:vscode')
-  " Non VSCode settings
+  " General settings
   source $HOME/.config/nvim/general.vim
   source $HOME/.config/nvim/plug.vim
 endif
-
