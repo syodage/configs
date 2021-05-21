@@ -18,14 +18,20 @@ git remote add git@github.com:syodage/configs.git
 # git remote add origin https://github.com/syodage/configs.git
 git fetch
 git pull origin master --ff-only
+
+# link .p10k.zsh powerlevel10k config file
+cd ~ # Goto home
+ln -s .config/commons/.p10k.zsh
 ```
 
 ## Development ##
 
 When configurations are ready track, remove those from the `.gitignore` file and commit it to the repo. This repo only contains the minimal configurations need to be tracked.
+When configurations are ready to track, remove that directory from the `.gitignore` file and commit it to the repo. This repo only contains the minimal configurations need to be tracked.
 
 ## Configs ##
 
+- `commons` directory contain extra configuration files, you may need to create soft link for those configuration files.
 - [alacritty](https://github.com/alacritty/alacritty) terminal configurations.
 
 ---
