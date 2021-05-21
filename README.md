@@ -26,12 +26,12 @@ ln -s .config/commons/.p10k.zsh
 
 ## Development ##
 
-When configurations are ready track, remove those from the `.gitignore` file and commit it to the repo. This repo only contains the minimal configurations need to be tracked.
 When configurations are ready to track, remove that directory from the `.gitignore` file and commit it to the repo. This repo only contains the minimal configurations need to be tracked.
 
 ## Configs ##
 
 - `commons` directory contain extra configuration files, you may need to create soft link for those configuration files.
+- [ranger]() terminal based file manager app, smootly integrate with neovim.
 - [alacritty](https://github.com/alacritty/alacritty) terminal configurations.
 
 ---
