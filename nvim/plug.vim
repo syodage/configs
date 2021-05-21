@@ -12,8 +12,6 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'              " Vim one dark syntax
 Plug 'haishanh/night-owl.vim'
-Plug 'ap/vim-css-color'
-Plug 'vifm/vifm.vim'                      " Vi[m] like File Manager
 Plug 'tpope/vim-surround'
 Plug 'ap/vim-buftabline'                  " Easily navigate to buffers
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " Enable fzf inside vim
@@ -59,21 +57,11 @@ colorscheme onedark
 """""""""""""""""""""""""""""""""""""""""
 " => lightline configs
 """""""""""""""""""""""""""""""""""""""""
+" check this for more info https://github.com/itchyny/lightline.vim
 " To enable the lightline theme
 let g:lightline = { 'colorscheme': 'onedark' }
-" --INSERT-- is unnecessary so remove it
-set noshowmode
 
 " End of one dark vim config
-"""""""""""""""""""""""""""""""""""""""""
-" => Vifm configs
-"""""""""""""""""""""""""""""""""""""""""
-" noremap <Leader>vv :Vifm<CR>
-" noremap <Leader>vs :VsplitVifm<CR>
-" noremap <Leader>sp :SplitVifm<CR>
-" noremap <Leader>dv :DiffVifm<CR>
-" noremap <Leader>tv :TabVifm<CR>
-" End Vifm config
 """""""""""""""""""""""""""""""""""""""""
 " => Ranger configs 
 """""""""""""""""""""""""""""""""""""""""
