@@ -1,35 +1,19 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Start of custom suff
+" => Settings 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " set leader key
-let g:mapleader = ","
+let g:mapleader = "\<Space>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Mouse Scrolling
+" => mouse scrolling
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=nicr
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Split and Tabbed Files 
+" => split and tabbed files 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set splitbelow splitright
-
-" Remap splits navingation to Ctrl + hjkl 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" Make adjusting splits size bit more friendly, Ctrl + up/down/left/right
-noremap <silent> <C-Left> :vertical resize +3<CR>
-noremap <silent> <C-Right> :vertical resize -3<CR>
-noremap <silent> <C-Up> :resize +3<CR>
-noremap <silent> <C-Down> :resize -3<CR>
-
-" Change 2 split windows from vert to horiz or horiz to vert
-map <Leader>th <C-w>t<C-w>H
-map <Leader>tk <C-w>t<C-w>K
 
 " Remove | which act like a speartion of windowsl
 " set fillchars+=vert:\
@@ -46,12 +30,7 @@ let g:netrw_winsize = 25
 " autocmd!
 "  autocmd VimEnter * :Vexplore
 "augroup END
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Open terminal inside the VIM 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>tt :vnew term://zsh<CR>
-
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Line numbers 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,34 +44,20 @@ set number relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
+" End Line numbers
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Buffer stuff 
+" => lightline configs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TAB and Shift + TAB to move next and previous buffers
-noremap <TAB> :bnext<CR>
-noremap <S-TAB> :bprevious<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Make life bit more easier 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ctrl + s to save 
-noremap <C-s> :w<CR> 
-noremap <C-Q> :wq!<CR>
-noremap <C-c> <Esc>
-" <TAB>: completion
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
-"Better tabbing
-vnoremap < <gv
-vnoremap > >gv
-
+set laststatus=2
+set noshowmode          " Hide --INSERT--, it is unnecessary so remove it
+" End lightline configs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other stuff 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable                           " Enables syntax highlighing
 syntax on
-set hidden                              " Required to keep multiple buffers open multiple buffers
+set hidden                              " Required to keep multiple buffers open multiple buffers, bufferline plugin need this.
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
@@ -112,61 +77,13 @@ set autoindent                          " Good auto indent
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
-" set nobackup                            " This is recommended by coc
-" set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 "set autochdir                           " Your working directory will always be the same as your working directory
-
-" config for intchyny/lightline.vim plugin
-" check this for more info https://github.com/itchyny/lightline.vim
-set laststatus=2
-set noshowmode          " Hide --INSERT-- 
-
+set termguicolors                       " Need for colorized plug and others to work. 
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
-" You can't stop me
-" cmap w!! w !sudo tee %
-"
-
-"""""""""""""""""""""""""""""""""""""""""
-" => Resources 
-"""""""""""""""""""""""""""""""""""""""""
-" Mapping help
-" For more details check this https://vim.fandom.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_1)
-"
-" :verbose map , (this list all the location map begins with ,)
-" 
-" special mapping keys
-" Ctrl-I      Tab
-" Ctrl-[      Esc
-" Ctrl-M      Enter
-" Ctrl-H      Backspace
-" 
-" <BS>           Backspace
-" <Tab>          Tab
-" <CR>           Enter
-" <Enter>        Enter
-" <Return>       Enter
-" <Esc>          Escape
-" <Space>        Space
-" <Up>           Up arrow
-" <Down>         Down arrow
-" <Left>         Left arrow
-" <Right>        Right arrow
-" <F1> - <F12>   Function keys 1 to 12
-" #1, #2..#9,#0  Function keys F1 to F9, F10
-" <Insert>       Insert
-" <Del>          Delete
-" <Home>         Home
-" <End>          End
-" <PageUp>       Page-Up
-" <PageDown>     Page-Down
-" <bar>          the '|' character, which otherwise needs to be escaped '\|'
-
-" source $HOME/.config/nvim/general/settings.vim
-" source $HOME/.config/nvim/keys/mappings.vim
-
+" End Settings
