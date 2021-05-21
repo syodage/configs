@@ -12,6 +12,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'              " Vim one dark syntax
 Plug 'haishanh/night-owl.vim'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' } " Colorizer
 Plug 'tpope/vim-surround'
 Plug 'ap/vim-buftabline'                  " Easily navigate to buffers
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " Enable fzf inside vim
@@ -22,8 +23,8 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 " GoLang support for vim , commands (:Go{Build | Install | Test | TestFunc | Run | Import | Drop | Doc | AddTags | RemoveTags | Lint  | Vet ..
 " Coverage | Def | Implements | Callees | Refrerrers .... } 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " GoLang support for vim
+Plug 'mhinz/vim-startify'  " Startify - A fancy start screen for vim
 call plug#end()
-
 
 """""""""""""""""""""""""""""""""""""""""
 " => FZF configs
