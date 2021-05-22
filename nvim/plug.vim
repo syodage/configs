@@ -24,6 +24,12 @@ Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 " Coverage | Def | Implements | Callees | Refrerrers .... } 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " GoLang support for vim
 Plug 'mhinz/vim-startify'  " Startify - A fancy start screen for vim
+
+" Lua support
+Plug 'neovim/nvim-lspconfig'  " neovim lua integration
+
+" Snippets support 
+Plug 'norcalli/snippets.nvim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""

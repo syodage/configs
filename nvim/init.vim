@@ -9,4 +9,5 @@ else
   source $HOME/.config/nvim/settings.vim
   source $HOME/.config/nvim/plug.vim
   source $HOME/.config/nvim/keymapping.vim
+  source $HOME/.config/nvim/lsp_configs.vim
 endif
