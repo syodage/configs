@@ -27,6 +27,7 @@ Plug 'mhinz/vim-startify'  " Startify - A fancy start screen for vim
 
 " Lua support
 Plug 'neovim/nvim-lspconfig'  " neovim lua integration
+Plug 'hrsh7th/nvim-compe'     " Auto complete
 
 " Snippets support 
 Plug 'norcalli/snippets.nvim'
